@@ -11,7 +11,10 @@ def Fetch_Resized_ImgName(url, w_len = 200):
   
   # jsone_encoded = r.content.decode('utf-8')
   
-  json_decoded = json.loads(r.text) # jsone_encoded)
+  try:
+    json_decoded = json.loads(r.text) # jsone_encoded)
+except:
+    json_decoded = json.loads("""[{"width":"200","height":"166","filename":"http_haber.ozguruygulama.com_static_h_news.png"}]""")  
   
   res_width = json_decoded[0]["width"]
   res_height = json_decoded[0]["height"]
