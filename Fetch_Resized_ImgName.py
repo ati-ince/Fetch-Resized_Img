@@ -6,8 +6,8 @@ import json
 def Fetch_Resized_ImgName(url, w_len = 200):
   # Fetch_Resized_ImgName(url) -> len(Fetch_Resized_ImgName(url)):4, 1-> w, 2->h, 3->filename, 4->(w,h)
 
-  quoted_url = "http://haber.ozguruygulama.com/fetch_img_with_rszd?img_url=%s&w_len=%d" % (quote(url), w_len)
-  
+  quoted_url = "http://18.184.179.85/?img_url=%s&w_len=%d" % (quote(url), w_len)
+  #http://haber.ozguruygulama.com/fetch_img_with_rszd   
   r_get_false = False
   
   try:
